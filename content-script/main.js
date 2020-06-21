@@ -40,10 +40,29 @@ const main = function () {
 
     load_dark_mode_setting()
 
+    $('.bili-banner').removeAttr('style')
+    $('.bili-banner').css('background', '#212121')
+
 }
 
+// chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+//     setTimeout(() => {main()}, 15000)
+//     setTimeout(() => {main()}, 10000)
+//     setTimeout(() => {main()}, 5000)
+//     setTimeout(() => {main()}, 3000)
+//     setTimeout(() => {main()}, 2000)
+//     setTimeout(() => {main()}, 1000)
+//     setTimeout(() => {main()}, 300)
+//     setTimeout(() => {main()}, 200)
+//     setTimeout(() => {main()}, 100)
+//     setTimeout(() => {main()}, 50)
+//  });
 
-
+setTimeout(() => {main()}, 15000)
+setTimeout(() => {main()}, 10000)
+setTimeout(() => {main()}, 5000)
+setTimeout(() => {main()}, 3000)
+setTimeout(() => {main()}, 2000)
 setTimeout(() => {main()}, 1000)
 setTimeout(() => {main()}, 300)
 setTimeout(() => {main()}, 200)

@@ -18,7 +18,8 @@
     {
       "matches": [
         "*://www.bilibili.com/*",
-        "*://bangumi.bilibili.com/*"
+        "*://bangumi.bilibili.com/*",
+        "*://space.bilibili.com/*"
       ],
       "js": [
         "content-script.js"

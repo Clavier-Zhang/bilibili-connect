@@ -6,6 +6,10 @@ export const DEFAULT_BLOCK_LIST = [
     '.international-footer',  // 页面底部
     '.banner-link',           // 顶部图片导航链接
     '.head-title',            // 顶部图片导航链接
+    '#bannerAd',              // 视频页广告
+    '#live_recommand_report', // 视频页直播推荐
+    '#right-bottom-banner',   // 视频页广告
+    '#slide_ad',              // 视频页广告
 ]
 
 export const CATEGORY_BLOCK_LIST = [
@@ -33,7 +37,7 @@ export const CATEGORY_BLOCK_LIST = [
 
 export const DARK_MODE = {
     background: '#212121',
-    opacity: 0.7,
+    opacity: 0.95,
     color: '#f4f4f4',
 }
 
@@ -43,7 +47,7 @@ export const LIGHT_MODE = {
     color: '#212121',
 }
 
-export const DARK_MODE_SELECTORS = [
+export const DARK_MODE_TEXT_SELECTORS = [
     '.tl-link',       // 新番时间表
     '.title',
     '.published',
@@ -54,4 +58,71 @@ export const DARK_MODE_SELECTORS = [
     '.btn',
     '.more',
     'ul.con li a',
+    '.text',
+    '.text-con',
+    '.username',
+    '.player-auxiliary-filter-title',
+    '.info',
+    '.tit',
+    '.bilibili-player-video-info-danmaku-text',
+    '.bilibili-player-video-info-people-text',
+    '.bilibili-player-video-info-danmaku-number',
+    '.bilibili-player-video-info-people-number',
+    '.btn > span',
+    '.comment-header.clearfix',
+    '.new-sort',
+    '.tcd-number',
+    '.dian',
+    '.next',
+    '.be-pager-item',
+    '.be-pager-next',
+    '.n-text',
+    '.n-data-v',
+    '.be-dropdown.filter-item',
+    '.search-fav-input.space_input',
+    '.space_input',
+    '.card',
+    'h3',
+    'span',
+    'li',
+    '.col-1',
+    '.col-2',
+    '.section'
+    
+]
+
+export const DARK_MODE_BACKGROUND_SELECTORS = [
+    'body',       
+    '.tl-link',
+    '.comment-list',
+    '.bui-collapse-header',
+    '.mini-header__content',
+    '.bilibili-player-video-sendbar',
+    '.bui-collapse-wrap',
+    '.comment-header.clearfix',
+    '.comment-send',
+    '.bb-comment',
+    '.tcd-number',
+    '.dian',
+    '.next',
+    '.col-full.clearfix.master',
+    '.s-space',
+    '.be-pager-item',
+    '.be-pager-next',
+    '.n-inner.clearfix',
+    '.be-dropdown',
+    '.small-item',
+    '.filter-item',
+    '.search-fav-input.space_input',
+    '.space_input',
+    '.fav-main',
+    '.card',
+    '.user',
+    '.col-full',
+    '#setting-new-tag-btn',
+    '.col-1',
+    '.col-2',
+    '.section',
+    'textarea'
+    
 ]

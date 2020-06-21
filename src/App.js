@@ -1,9 +1,7 @@
-/* global chrome */
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import CategorySwitch from './components/CategorySwitch'
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
 
 
 class App extends React.Component {
@@ -14,8 +12,32 @@ class App extends React.Component {
                 <header className="App-header">
                     <Grid container alignItems="center" xs={10}>
 
-                        <Grid item xs={12}>
-                            <img src={logo} className="App-logo" alt="logo" />
+                        <Button
+                        variant="contained"
+                        component="label"
+                        >
+                        Upload File
+                        <input
+                            type="file"
+                            style={{ display: "none" }}
+                        />
+                        </Button>
+
+                        <Grid item xs={12} style={{textAlign: 'left', paddingBottom: 10, fontWeight: 'bold'}}>
+                            外观
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <CategorySwitch title="深色模式" selector="is_dark_mode"/>
+                        </Grid>
+
+                        <Grid item xs={6}>
+                            <CategorySwitch title="置顶新番" selector="isDarkMode"/>
+                        </Grid>
+
+
+                        <Grid item xs={12} style={{textAlign: 'left', paddingBottom: 10, fontWeight: 'bold', paddingTop: 10}}>
+                            屏蔽设置
                         </Grid>
 
                         <Grid item xs={4}>
@@ -90,17 +112,14 @@ class App extends React.Component {
                             <CategorySwitch title="电视剧" selector="#bili_teleplay"/>
                         </Grid>
 
-                        <Grid item xs={5}>
+                        <Grid item xs={4}>
                             <CategorySwitch title="记录片" selector="#bili_documentary"/>
                         </Grid>
 
-                        <Grid item xs={6}>
+                        <Grid item xs={5}>
                             <CategorySwitch title="特别推荐" selector="#bili_report_spe_rec"/>
                         </Grid>
 
-                        <Grid item xs={4}>
-                            <CategorySwitch title="深色模式" selector="isDarkMode"/>
-                        </Grid>
                         
                     </Grid>
                 </header>

@@ -15,7 +15,7 @@ class CategorySwitch extends React.Component {
     componentWillMount() {
         chrome.storage.sync.get(this.props.selector, (items) => {
             this.setState({
-                value: items[this.props.selector] === undefined ? true : items[this.props.selector]
+                value: items[this.props.selector] === undefined ? this.props.defaultValue : items[this.props.selector]
             })
         })
     }
@@ -32,14 +32,18 @@ class CategorySwitch extends React.Component {
     render() {
         return (
             <Grid component="label" container alignItems="center" spacing={1}>
-                <Grid item>{this.props.title}</Grid>
-                <Grid item>
+                <Grid item xs={6} style={{textAlign: 'left'}}>{this.props.title}</Grid>
+                <Grid item xs={6}>
                     <Switch onChange={this.switchOnChange.bind(this)} checked={this.state.value} label="Small" />
                 </Grid>
             </Grid>
         )
     }
     
+}
+
+CategorySwitch.defaultProps = {
+    defaultValue: true
 }
 
 export default CategorySwitch;

@@ -14,8 +14,6 @@ class CategorySwitch extends React.Component {
 
     componentWillMount() {
         chrome.storage.sync.get(this.props.selector, (items) => {
-            console.log('*****')
-            console.log(items[this.props.selector], this.props.selector)
             this.setState({
                 value: items[this.props.selector] === undefined ? true : items[this.props.selector]
             })

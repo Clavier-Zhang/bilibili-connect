@@ -149,7 +149,10 @@ module.exports = function(webpackEnv) {
         // changing JS code would still trigger a refresh.
       ].filter(Boolean),
       background: './background/background.js',
-      'content-script': './content-script/content-script.js'
+      'content-script': './content-script/main.js',
+      'config': './content-script/config.js',
+      'dark-mode': './content-script/dark-mode.js',
+      'hide': './content-script/hide.js'
     },
     output: {
       // The build folder.

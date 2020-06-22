@@ -12,6 +12,9 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
                 remove_dark_mode()
             }
             
+        } else if (key == 'top_category') {
+            $('.proxy-box').prepend($(changes[key].newValue))
+
         } else if (changes[key].newValue == false) {
             hide_one(key)
         } else {
@@ -19,6 +22,12 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
         }
     }
 })
+
+function load_top_category() {
+    chrome.storage.sync.get('top_category', function (data) {
+        $('.proxy-box').prepend($(data['top_category']))
+    })
+}
 
 
 function hide_one(selector) {
@@ -36,9 +45,11 @@ const main = function () {
     hide_default()
 
 
-    $('.proxy-box').prepend($('#bili_anime'))
+    load_top_category()
 
     load_dark_mode_setting()
+
+    $('#bilibiliPlayer').css('-webkit-box-shadow', '0 0 0px')
 
     $('.bili-banner').removeAttr('style')
     $('.bili-banner').css('background', '#212121')
@@ -57,6 +68,8 @@ const main = function () {
 //     setTimeout(() => {main()}, 100)
 //     setTimeout(() => {main()}, 50)
 //  });
+
+
 
 setTimeout(() => {main()}, 15000)
 setTimeout(() => {main()}, 10000)

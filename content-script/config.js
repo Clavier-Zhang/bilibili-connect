@@ -83,8 +83,6 @@ export const DARK_MODE_TEXT_SELECTORS = [
     '.space_input',
     '.card',
     'h3',
-    'span',
-    'li',
     '.col-1',
     '.col-2',
     '.section'

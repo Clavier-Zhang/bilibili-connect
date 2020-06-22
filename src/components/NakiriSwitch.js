@@ -3,7 +3,7 @@ import React from 'react';
 import { Switch, Grid } from '@material-ui/core';
 
 
-class CategorySwitch extends React.Component {
+class NakiriSwitch extends React.Component {
 
     constructor(props) {
         super(props);
@@ -31,10 +31,10 @@ class CategorySwitch extends React.Component {
 
     render() {
         return (
-            <Grid component="label" container alignItems="center" spacing={1}>
-                <Grid item xs={6} style={{textAlign: 'left'}}>{this.props.title}</Grid>
-                <Grid item xs={6}>
-                    <Switch onChange={this.switchOnChange.bind(this)} checked={this.state.value} label="Small" />
+            <Grid container alignItems="center" className="category-switch" justify="flex-start">
+                <Grid item xs={5} style={{textAlign: 'left', ...this.props.styles}}>{this.props.title}</Grid>
+                <Grid item xs={7}>
+                    <Switch onChange={this.switchOnChange.bind(this)} checked={this.state.value} />
                 </Grid>
             </Grid>
         )
@@ -42,8 +42,9 @@ class CategorySwitch extends React.Component {
     
 }
 
-CategorySwitch.defaultProps = {
-    defaultValue: true
+NakiriSwitch.defaultProps = {
+    defaultValue: true,
+    styles: {}
 }
 
-export default CategorySwitch;
+export default NakiriSwitch;

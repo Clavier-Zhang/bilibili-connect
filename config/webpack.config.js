@@ -152,7 +152,8 @@ module.exports = function(webpackEnv) {
       'content-script': './content-script/main.js',
       'config': './content-script/config.js',
       'dark-mode': './content-script/dark-mode.js',
-      'hide': './content-script/hide.js'
+      'hide': './content-script/hide.js',
+      'banner': './content-script/banner.js'
     },
     output: {
       // The build folder.
@@ -329,7 +330,7 @@ module.exports = function(webpackEnv) {
               loader: require.resolve('url-loader'),
               options: {
                 limit: 10000,
-                name: 'static/media/[name].[hash:8].[ext]'
+                name: 'static/media/[name].[ext]'
               }
             },
             // Process application JS with Babel.

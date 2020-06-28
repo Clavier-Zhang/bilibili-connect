@@ -1,5 +1,5 @@
 {
-  "name": "Chrome Extension Starter Kit",
+  "name": "Bilibili Connect",
   "version": "1.0",
   "manifest_version": 2,
   "browser_action": {
@@ -17,8 +17,9 @@
   "content_scripts": [
     {
       "matches": [
-        "*://www.bilibili.com/*",
-        "*://bangumi.bilibili.com/*",
+        "*://www.bilibili.com/",
+        "*://www.bilibili.com/?*",
+        "*://www.bilibili.com/video/*",
         "*://space.bilibili.com/*"
       ],
       "js": [
@@ -26,5 +27,13 @@
       ]
     }
   ],
+  "icons": 
+    { 
+      "16": "icon.png",
+      "19": "icon.png",
+      "38": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
 }

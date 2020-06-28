@@ -1,7 +1,7 @@
+/* global chrome */
 import React from 'react'
-import { CATEGORIES } from '../config';
-import { Grid, Button, Select, MenuItem } from '@material-ui/core';
-
+import { CATEGORIES } from '../config'
+import { Grid, Select, MenuItem } from '@material-ui/core'
 
 export default class NakiriSelect extends React.Component {
 
@@ -28,7 +28,6 @@ export default class NakiriSelect extends React.Component {
           [this.props.selector]: event.target.value
         })
     }
-
 
     render() {
         return (

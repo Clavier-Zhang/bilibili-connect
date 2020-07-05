@@ -109,6 +109,7 @@ export const TEXT_SELECTORS = [
     '.pgc-item-title', // 个人 订阅
     '.pgc-item-desc', // 个人 订阅
     '.setting-privacy-name', // 个人 设置
+    '.album-card .title', //UP主页面 相簿
     
 ]
 
@@ -147,6 +148,7 @@ export const BACKGROUND_SELECTORS = [
     '.post-content', //UP主 动态
     '#submit-video-type-filter', //UP主页面 投稿
     '#multi_page', // 视频页
+    '.tab-list', //UP主页面 相簿
     
 ]
 
@@ -180,5 +182,21 @@ export const BORDER_SELECTORS = [
     '#arc_toolbar_report', //视频页
     '.comment-header', //视频页
     '.con', //视频页
+    '.album-content', //UP主页面 相簿
 
+]
+
+export const VIDEO_CARDS = [
+    '.video-card-reco', // 首页推荐
+    '.video-card-common', // 首页视频
+    '.live-card', // 首页直播
+    '.rank-wrap', // 首页排行榜
+    '.card-box', // 视频内推荐
+    '.bilibili-player-ending-panel-box-recommend', // 视频内推荐
+
+]
+
+
+export const UP_CLASS = [
+    '.ex-up'
 ]

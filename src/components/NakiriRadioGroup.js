@@ -13,7 +13,7 @@ export default class NakiriRadioGroup extends React.Component {
         }
     }
 
-    componentWillMount() {
+    UNSAFE_componentWillMount() {
         chrome.storage.sync.get(this.props.selector, (items) => {
             this.setState({
                 value: items[this.props.selector] === undefined ? this.props.defaultValue : items[this.props.selector]

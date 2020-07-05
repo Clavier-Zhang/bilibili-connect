@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import { set_dark_mode, load_dark_mode_setting, remove_dark_mode } from './dark-mode';
-import { hide_category, hide_default, hide_one, show_one } from './hide'
+import { hide_category, hide_default, hide_one, show_one, load_blocks, update_blocks } from './hide'
 
 
 chrome.storage.onChanged.addListener(function (changes, namespace) {
@@ -12,6 +12,10 @@ chrome.storage.onChanged.addListener(function (changes, namespace) {
             } else {
                 remove_dark_mode()
             } 
+        } else if (key == 'blocks') {
+            update_blocks(changes['blocks'].oldValue, changes['blocks'].newValue)
+
+
         } else if (key == 'top_category') {
             $('.proxy-box').prepend($(changes[key].newValue))
 
@@ -97,6 +101,8 @@ const main = function () {
 
     hide_default()
 
+    load_blocks()
+
 
     load_top_category()
 
@@ -117,4 +123,5 @@ setTimeout(() => {main()}, 300)
 setTimeout(() => {main()}, 200)
 
 
-setInterval(() => {main()}, 2000)
+setInterval(() => {main()}, 500)
+

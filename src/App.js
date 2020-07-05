@@ -18,9 +18,11 @@ export default function App() {
 
     return (
         <Grid container justify="center" className="App" alignItems="flex-start">
-
+            
+            {/* Load global css for material ui */}
             <NakiriGlobalStyle/>
 
+            {/* Tab */}
             <AppBar position="static" color="transparent">
                 <Tabs value={value} onChange={handleChange} variant="fullWidth" textColor="inherit">
                     <Tab label="外观" />
@@ -28,16 +30,15 @@ export default function App() {
                 </Tabs>
             </AppBar>
 
+            {/* Panels */}
             <NakiriPanel value={value} index={0}>
                 <NakiriDisplayView/>
             </NakiriPanel>
-
 
             <NakiriPanel value={value} index={1}>
                 <NakiriBlockView selector="blocks" defaultValue={[]}/>
             </NakiriPanel>
 
-      
         </Grid>
     )
 }

@@ -37,6 +37,7 @@ export const set_dark_mode = () => {
     })
 
     $('.player-auxiliary-filter').css('background-color', 'transparent')
+    
 
 }
 
@@ -56,6 +57,13 @@ export const remove_dark_mode = () => {
     $('body').css('background-color', '#f4f5f7')
     $('.col-1').css('background-color', '#f4f5f7')
     $('#submit-video-type-filter').css('background-color', '#f4f5f7')
+    $('.tab-list').css('background-color', '#f4f5f7')
+
+    // 首页 header 文字 变白
+    $('.international-home .mini-header span').css('color', 'white')
+    $('.international-home .mini-header i').css('color', 'white')
+    $('.international-home .mini-header a').css('color', 'white')
+    $('.international-home .mini-header a').css('color', 'white')
 
     
     

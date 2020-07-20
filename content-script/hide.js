@@ -64,14 +64,14 @@ export function display_one_video_card_by_keyword(keyword) {
 export function load_blocks() {
     chrome.storage.sync.get('blocks', function (data) {
         let items = data['blocks']
-        for (let i = 0; i < items.length; i++) {
-            if (items[i].type == 'up') {
-                block_one_video_card_by_keyword(items[i].value)
-            } else {
-                block_one_video_card_by_keyword(items[i].value)
+        if(items)
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].type == 'up') {
+                    block_one_video_card_by_keyword(items[i].value)
+                } else {
+                    block_one_video_card_by_keyword(items[i].value)
+                }
             }
-        }
-
     })
 }
 

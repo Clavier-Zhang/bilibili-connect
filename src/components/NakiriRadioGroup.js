@@ -2,7 +2,8 @@
 import React from 'react'
 import NakiriCanvas from './NakiriCanvas';
 import { Grid, Radio, RadioGroup, FormControlLabel } from '@material-ui/core'
-
+import old1 from '../asset/old1.png'
+import old2 from '../asset/old2.jpg'
 
 export default class NakiriRadioGroup extends React.Component {
 
@@ -57,7 +58,7 @@ export default class NakiriRadioGroup extends React.Component {
 
                     <Grid item container xs={6}>
                         <Grid item xs={12}>
-                            <NakiriCanvas selected={this.state.value === "old1"} background='url("https://i0.hdslb.com/bfs/archive/6c42c40ed54f4bb5ea491894aff693878afa6580.png")'/>
+                            <NakiriCanvas selected={this.state.value === "old1"} background={old1}/>
                         </Grid>
                         <Grid item xs={2}/>
                         <Grid item container xs={10}>
@@ -67,7 +68,7 @@ export default class NakiriRadioGroup extends React.Component {
 
                     <Grid item container xs={6}>
                         <Grid item xs={12}>
-                            <NakiriCanvas selected={this.state.value === "old2"} background='url("https://i0.hdslb.com/bfs/album/2d78428aaf2d479538b8d3ec20390372cefdb07c.jpg")'/>
+                            <NakiriCanvas selected={this.state.value === "old2"} background={old2}/>
                         </Grid>
                         <Grid item xs={2}/>
                         <Grid item container xs={10}>

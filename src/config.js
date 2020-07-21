@@ -21,4 +21,5 @@ export const CATEGORIES = {
     "音乐": "#bili_music",
     "动画": "#bili_douga",
     "番剧": "#bili_anime",
+    "侧边栏": "#elevator",
 }

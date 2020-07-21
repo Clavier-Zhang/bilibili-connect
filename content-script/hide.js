@@ -1,6 +1,7 @@
 /* global chrome */
 import $ from 'jquery'
-import { DEFAULT_BLOCK_LIST, CATEGORY_BLOCK_LIST, VIDEO_CARDS, UP_CLASS } from './config';
+import { DEFAULT_BLOCK_LIST, CATEGORY_BLOCK_LIST, VIDEO_CARDS } from './config';
+import { CATEGORIES } from '../src/config'
 
 export function hide_one(selector) {
     $(selector).hide()
@@ -18,6 +19,11 @@ export function show_one(selector) {
     $(selector).show()
 }
 
+export function solve_list(selector) {
+    if (selector == '#elevator') return
+    $(`#elevator>div.list-box>div:nth-child(1)>div:contains('${Object.keys(CATEGORIES).find(k => CATEGORIES[k]===selector)}')`).hide()
+}
+
 export function hide_category() {
     chrome.storage.sync.get(CATEGORY_BLOCK_LIST, function (data) {
         for(let i = 0; i < CATEGORY_BLOCK_LIST.length; i++) {
@@ -26,6 +32,7 @@ export function hide_category() {
             
             if (is_display != undefined && !is_display) {
                 hide_one(selector)
+                solve_list(selector)
             }
         }
     })
@@ -37,14 +44,8 @@ export function hide_default() {
     }
 }
 
-
-
-
-
-
 export function block_one_video_card_by_keyword(keyword) {
     for (let i = 0; i < VIDEO_CARDS.length; i++) {
-
         let selector = VIDEO_CARDS[i] + ':contains("' + keyword + '")'
         hide_one_card(selector)
     }
@@ -57,21 +58,17 @@ export function display_one_video_card_by_keyword(keyword) {
     }
 }
 
-
-
-
-
 export function load_blocks() {
     chrome.storage.sync.get('blocks', function (data) {
         let items = data['blocks']
-        for (let i = 0; i < items.length; i++) {
-            if (items[i].type == 'up') {
-                block_one_video_card_by_keyword(items[i].value)
-            } else {
-                block_one_video_card_by_keyword(items[i].value)
+        if (items)
+            for (let i = 0; i < items.length; i++) {
+                if (items[i].type == 'up') {
+                    block_one_video_card_by_keyword(items[i].value)
+                } else {
+                    block_one_video_card_by_keyword(items[i].value)
+                }
             }
-        }
-
     })
 }
 

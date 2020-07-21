@@ -2,7 +2,6 @@ export const DEFAULT_BLOCK_LIST = [
     'a.banner-card.b-wrap',   // 直播区广告
     'a.banner-card.b-wrap',   // 直播区广告
     'a.contact-help',         // 联系客服
-    '#elevator',              // 导航侧边栏
     '.international-footer',  // 页面底部
     '.banner-link',           // 顶部图片导航链接
     '.head-title',            // 顶部图片导航链接
@@ -33,6 +32,7 @@ export const CATEGORY_BLOCK_LIST = [
     '#bili_documentary',    // 纪录片
     '#bili_report_spe_rec', // 特别推荐
     '#bili_movie',          // 电影
+    '#elevator',              // 导航侧边栏
 ]
 
 export const DARK_MODE = {

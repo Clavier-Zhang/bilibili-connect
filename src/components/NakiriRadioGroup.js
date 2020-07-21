@@ -58,7 +58,7 @@ export default class NakiriRadioGroup extends React.Component {
 
                     <Grid item container xs={6}>
                         <Grid item xs={12}>
-                            <NakiriCanvas selected={this.state.value === "old1"} background={old1}/>
+                            <NakiriCanvas selected={this.state.value === "old1"} background={`url(${old1})`}/>
                         </Grid>
                         <Grid item xs={2}/>
                         <Grid item container xs={10}>
@@ -68,7 +68,7 @@ export default class NakiriRadioGroup extends React.Component {
 
                     <Grid item container xs={6}>
                         <Grid item xs={12}>
-                            <NakiriCanvas selected={this.state.value === "old2"} background={old2}/>
+                            <NakiriCanvas selected={this.state.value === "old2"} background={`url(${old2})`}/>
                         </Grid>
                         <Grid item xs={2}/>
                         <Grid item container xs={10}>
